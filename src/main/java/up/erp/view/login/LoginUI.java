@@ -38,7 +38,7 @@ import up.erp.view.App;
 
 /**
  *
- * @author Diego Javier Quispe
+ * @author Hvt
  */
 @Route("")
 @PWA(name = "Vaadin up.erp.Application", shortName = "Vaadin App", description = "This is an example Vaadin application.", enableInstallPrompt = false)
