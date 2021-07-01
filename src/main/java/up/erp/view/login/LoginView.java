@@ -27,49 +27,49 @@ import com.vaadin.ui.UI;*/
 
 /**
  *
- * @author evander
+ * @author Hvt
  */
 
 public class LoginView extends LoginUI {
 
     public LoginView() {
-        //super("Grupo Upgrade S.A.C.");
+        // super("Grupo Upgrade S.A.C.");
         // TODO Auto-generated constructor stub
-        
+
         initHandlers();
-        
+
     }
 
     private void initHandlers() {
-        //this.getTxtClave().addValueChangeListener(e->connect());
-        //this.getBtnConectar().addClickListener(this::connect);
+        // this.getTxtClave().addValueChangeListener(e->connect());
+        // this.getBtnConectar().addClickListener(this::connect);
     }
 
     private void connect() {
-        
-        try{
+
+        try {
             String user = txtUsuario.getValue();
             String pass = txtPassword.getValue();
-            
+
             Session session = Services.getLogin().newLogin(user, pass, Persistence.EMPRESA_GRUPO_UPGRADE_ID);
             UI.getCurrent().getSession().setAttribute("session", session);
-            
-            //UI.getCurrent().getSession().setAttribute("", new MainView());
+
+            // UI.getCurrent().getSession().setAttribute("", new MainView());
             UI.getCurrent().getSession().setAttribute("", new App());
-            //App.setMainView(new MainView());
+            // App.setMainView(new MainView());
             setContent(new App());
-            //App.getMainView().setCaption();
-            //UI.getCurrent().setContent(App.getMainView());
-            //UI.getCurrent().addWindow(App.getSesion().mainView);
-            
-            //close();
-        } catch(Exception ex) {
+            // App.getMainView().setCaption();
+            // UI.getCurrent().setContent(App.getMainView());
+            // UI.getCurrent().addWindow(App.getSesion().mainView);
+
+            // close();
+        } catch (Exception ex) {
             ex.printStackTrace();
-            //Messages.error(ex.getMessage());
+            // Messages.error(ex.getMessage());
         }
 
     }
-    
+
     public void setContent(Component component) {
         this.layContent.removeAll();
         this.layContent.add(component);
