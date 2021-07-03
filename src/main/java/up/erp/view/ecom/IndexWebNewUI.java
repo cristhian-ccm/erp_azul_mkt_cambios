@@ -34,9 +34,9 @@ import up.erp.view.App;
 
 /**
  *
- * @author Luis Aleman
+ * @author Hvt
  */
-public abstract class IndexWeb2UI extends VerticalLayout {
+public abstract class IndexWebNewUI extends VerticalLayout {
 
     // -----------------------------------------------------------------------------------------------
     // CPANEL CABECERA
@@ -50,6 +50,8 @@ public abstract class IndexWeb2UI extends VerticalLayout {
     public final Button btnPedidos = new Button("Pedidos Ecommerce", VaadinIcon.CART_O.create());
     public final Button btnLineas = new Button("Lineas Ecommerce", VaadinIcon.RECORDS.create());
     public final Button btnProductos = new Button("Productos Ecommerce", VaadinIcon.PACKAGE.create());
+    public final Button btnEcomPage = new Button("Página Ecommerce", VaadinIcon.GLOBE_WIRE.create());
+
     // public final Button btnEcomPage = new Button("Gestión Página Ecommerce",
     // VaadinIcon.GLOBE_WIRE.create());
     // -----------------------------------------------------------------------------------------------
@@ -59,7 +61,7 @@ public abstract class IndexWeb2UI extends VerticalLayout {
             btnCupones, btnPuntosUP);
     // -----------------------------------------------------------------------------------------------
     public final HorizontalLayout layCPanelButtons2 = new HorizontalLayout(btnPedidos, btnLineas, btnProductos,
-            btnSalirCP);
+            btnEcomPage, btnSalirCP);
     // -----------------------------------------------------------------------------------------------
     // END CABECERA
     // -----------------------------------------------------------------------------------------------
@@ -69,7 +71,7 @@ public abstract class IndexWeb2UI extends VerticalLayout {
     // -----------------------------------------------------------------------------------------------
     // HEADER
     // -----------------------------------------------------------------------------------------------
-    Label titulo = new Label("INDEX PAGINA E-COMMERCE");
+    Label titulo = new Label("INDEX PAGINA E-COMMERCE NEW");
     public final HorizontalLayout head = new HorizontalLayout(titulo);
     // -----------------------------------------------------------------------------------------------
     // WORKSPACE
@@ -411,7 +413,7 @@ public abstract class IndexWeb2UI extends VerticalLayout {
     public final Notification notify_is_Guardado_Correct = new Notification(dialog_notf_Guardado_Correct);
 
     // -----------------------------------------------------------------------------------------------
-    public IndexWeb2UI() {
+    public IndexWebNewUI() {
 
         // add(head, header, layHeadPage, layBodyPage, layFootPage,fButtons);
         removeAll();
@@ -448,6 +450,9 @@ public abstract class IndexWeb2UI extends VerticalLayout {
 
         btnProductos.setWidthFull();
         btnProductos.getStyle().set("fontSize", "80%");
+
+        btnEcomPage.setWidthFull();
+        btnEcomPage.getStyle().set("fontSize", "80%");
 
         btnSalirCP.addThemeVariants(ButtonVariant.LUMO_ERROR);
         btnSalirCP.getStyle().set("fontSize", "80%");
@@ -1324,6 +1329,8 @@ public abstract class IndexWeb2UI extends VerticalLayout {
 
     public abstract void On_Open_dialog_Banner6();
 
+    public abstract void go_Index();
+
     // Upload New Image
     public abstract void on_UploadLinea_Ecom(SucceededEvent event);
 
@@ -1383,6 +1390,10 @@ public abstract class IndexWeb2UI extends VerticalLayout {
         btnProductos.addClickListener(e -> {
             removeAll();
             go_Productos();
+        });
+        btnEcomPage.addClickListener(e -> {
+            removeAll();
+            go_Index();
         });
         btnSalirCP.addClickListener(e -> {
             removeAll();
