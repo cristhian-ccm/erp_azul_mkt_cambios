@@ -217,8 +217,8 @@ public abstract class CPanelUI2 extends VerticalLayout {
     public final Button btnPedidos = new Button("PEDIDOS ECOMMERCE", VaadinIcon.CART_O.create());
     public final Button btnLineas = new Button("LINEAS ECOMMERCE", VaadinIcon.RECORDS.create());
     public final Button btnProductos = new Button("PRODUCTOS ECOMMERCE", VaadinIcon.PACKAGE.create());
+    public final Button btnCaracteristicas = new Button("CARACTERISTICAS PRODUCTOS", VaadinIcon.PACKAGE.create());
     public final Button btnEcomPage = new Button("PAGINA ECOMMERCE - INDEX", VaadinIcon.GLOBE_WIRE.create());
-    public final Button btnEcomPageNew = new Button("PAGINA ECOMMERCE NEW - INDEX", VaadinIcon.GLOBE_WIRE.create());
     public final Button btnCupones = new Button("CUPONES ECOMMERCE", VaadinIcon.TICKET.create());
     public final Button btnRepartidores = new Button("REPARTIDORES ECOMMERCE", VaadinIcon.TRUCK.create());
     public final Button btnPromociones = new Button("PROMOCIONES ECOMMERCE", VaadinIcon.GIFT.create());
@@ -228,8 +228,8 @@ public abstract class CPanelUI2 extends VerticalLayout {
     public final VerticalLayout layProductos = new VerticalLayout();
 
     public final VerticalLayout layPanelButtons = new VerticalLayout(btnClientes, btnSubscriptores, btnPedidos,
-            btnLineas, btnProductos, btnEcomPage, btnEcomPageNew, btnCupones, btnPromociones, btnPuntosUP, btnCrudBan,
-            btnSalirCP);
+            btnLineas, btnProductos, btnCaracteristicas, btnEcomPage, btnCupones, btnPromociones, btnPuntosUP,
+            btnCrudBan, btnSalirCP);
     // -----------------------------------------------------------------------------------------------
 
     // -----------------------------------------------------------------------------------------------
@@ -507,9 +507,9 @@ public abstract class CPanelUI2 extends VerticalLayout {
         btnSubscriptores.setWidthFull();
         btnPedidos.setWidthFull();
         btnProductos.setWidthFull();
+        btnCaracteristicas.setWidthFull();
         btnLineas.setWidthFull();
         btnEcomPage.setWidthFull();
-        btnEcomPageNew.setWidthFull();
         btnCupones.setWidthFull();
         btnRepartidores.setWidthFull();
         btnPromociones.setWidthFull();
@@ -535,11 +535,11 @@ public abstract class CPanelUI2 extends VerticalLayout {
 
     public abstract void On_IndexWebView();
 
-    public abstract void On_IndexWebNewView();
-
     public abstract void On_LineasEcommerceView();
 
     public abstract void On_ProductosView();
+
+    public abstract void On_CaracteristicasView();
 
     public abstract void On_CuponesView();
 
@@ -599,14 +599,15 @@ public abstract class CPanelUI2 extends VerticalLayout {
             On_ProductosView();
             // add(new ProductosView());
         });
+        btnCaracteristicas.addClickListener(e -> {
+            removeAll();
+            // On_ProductosView();
+            On_CaracteristicasView();
+            // add(new ProductosView());
+        });
         btnEcomPage.addClickListener(e -> {
             removeAll();
             On_IndexWebView();
-            // add(new IndexWebView());
-        });
-        btnEcomPageNew.addClickListener(e -> {
-            removeAll();
-            On_IndexWebNewView();
             // add(new IndexWebView());
         });
         btnCupones.addClickListener(e -> {

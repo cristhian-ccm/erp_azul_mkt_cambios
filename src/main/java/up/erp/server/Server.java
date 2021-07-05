@@ -36,22 +36,20 @@ public class Server {
     // ----------------------------------------------------------------------------------------------------
     // LOCAL
 
-    public static String PATH_WEBAPPS = "C:/Users/Upgrade - PC/Desktop/prueba_java/Otros/ERP_MKT_CHANGES/"; // public
-                                                                                                            // static
-                                                                                                            // String
+    // public static String PATH_WEBAPPS = "C:/Users/Upgrade -
+    // PC/Desktop/prueba_java/Otros/ERP_MKT_CHANGES/";
+    // public static String
     /*
-     * PATH_WEBAPPS =
-     * "C:/Users/Luis Aleman/Documents/2020/Upgrade 2020/ecommerce/erp/up_erp3_vsb/src/main/resources/META-INF/resources/"
-     * ; public static String PATH_IMAGES = PATH_WEBAPPS + "ecommerce/images/";
-     * public static String PATH_PDF = PATH_WEBAPPS + "ecommerce/pdf/"; public
-     * static String PATH_DEFIMG = PATH_WEBAPPS + "ecommerce/images/default.jpg";
-     * public static String PATH_PROMO = PATH_WEBAPPS + "ecommerce/promos/"; public
-     * static String PATH_REPORTS = PATH_WEBAPPS + "ecommerce/reportes/";
+     * public static String PATH_IMAGES = PATH_WEBAPPS + "ecommerce/images/"; public
+     * static String PATH_PDF = PATH_WEBAPPS + "ecommerce/pdf/"; public static
+     * String PATH_DEFIMG = PATH_WEBAPPS + "ecommerce/images/default.jpg"; public
+     * static String PATH_PROMO = PATH_WEBAPPS + "ecommerce/promos/"; public static
+     * String PATH_REPORTS = PATH_WEBAPPS + "ecommerce/reportes/";
      * 
      */
 
     // SERVER
-    // public static String PATH_WEBAPPS = "/opt/tomcat8/webapps/";
+    public static String PATH_WEBAPPS = "/opt/tomcat8/webapps/";
     public static String PATH_IMAGES = PATH_WEBAPPS + "images/ecommerce/";
     public static String PATH_REPORTS = PATH_WEBAPPS + "images/ecommerce/reportes/";
     public static String PATH_PDF = PATH_WEBAPPS + "ecommerce/pdf/";
@@ -60,7 +58,8 @@ public class Server {
     // ----------------------------------------------------------------------------------------------------
 
     // LOCAL
-    public static String URL_SERVER = "C:/Users/Upgrade - PC/Desktop/prueba_java/Otros/ERP_MKT_CHANGES/";
+    // public static String URL_SERVER = "C:/Users/Upgrade -
+    // PC/Desktop/prueba_java/Otros/ERP_MKT_CHANGES/";
     // public static String URL_SERVER = "http://localhost:8080/";
     // public static String URL_IMAGES = URL_SERVER + "ecommerce/promos/";
     // public static String URL_REPORTS = URL_SERVER + "ecommerce/reportes/";
@@ -81,7 +80,7 @@ public class Server {
     // ----------------------------------------------------------------------------------------------------
 
     // ----SERVER
-    // public static String URL_SERVER = "https://190.119.207.218:8443/";
+    public static String URL_SERVER = "https://190.119.207.218:8443/";
     public static String URL_IMAGES = URL_SERVER + "images/ecommerce/";
     public static String URL_REPORTS = URL_SERVER + "images/ecommerce/reportes/";
     public static String PATH_VIEW = URL_SERVER + "images/ecommerce/promos/";

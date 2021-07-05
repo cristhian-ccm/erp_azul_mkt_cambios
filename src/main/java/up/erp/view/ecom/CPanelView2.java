@@ -77,14 +77,6 @@ public class CPanelView2 extends CPanelUI2 {
 
     // --------------------------------------------------------------------------
     @Override
-    public void On_IndexWebNewView() {
-        this.app.layHeader.removeAll();
-        // this.app.setContent(new IndexWebView(app));
-        this.app.setContent(new IndexWebNewView(app));
-    }
-
-    // --------------------------------------------------------------------------
-    @Override
     public void On_CuponesView() {
         this.app.layHeader.removeAll();
         this.app.setContent(new CuponesView(app));
@@ -115,6 +107,12 @@ public class CPanelView2 extends CPanelUI2 {
     public void On_BtnCrudBan() {
         this.app.layHeader.removeAll();
         this.app.setContent(new BannerView(app));
+    }
+
+    @Override
+    public void On_CaracteristicasView() {
+        this.app.layHeader.removeAll();
+        this.app.setContent(new CaracteristicaView(app));
     }
 
     // --------------------------------------------------------------------------
